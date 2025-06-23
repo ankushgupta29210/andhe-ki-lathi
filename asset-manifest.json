@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/andhe-ki-lathi/static/css/main.cf890fdb.css",
+    "main.js": "/andhe-ki-lathi/static/js/main.8527b84e.js",
+    "index.html": "/andhe-ki-lathi/index.html",
+    "main.cf890fdb.css.map": "/andhe-ki-lathi/static/css/main.cf890fdb.css.map",
+    "main.8527b84e.js.map": "/andhe-ki-lathi/static/js/main.8527b84e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cf890fdb.css",
+    "static/js/main.8527b84e.js"
+  ]
+}
