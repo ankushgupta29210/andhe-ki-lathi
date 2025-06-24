@@ -152,33 +152,48 @@
   </div>
 </section>
 
-
-<!--refund Policy-->
+<!--refund Policies-->
 <section class="py-20 px-6 bg-gray-50">
   <h2 class="text-4xl font-bold text-center mb-10">📋 Policies</h2>
-  
-  <div class="max-w-3xl mx-auto text-lg leading-relaxed space-y-8">
+
+  <div class="max-w-3xl mx-auto space-y-6 text-lg">
 
     <div>
-      <h3 class="text-2xl font-semibold mb-2">📦 Shipping Policy</h3>
-      <p>Shipping costs are calculated separately and will be added at checkout based on your location. Orders are typically processed within 3–5 business days and delivered within 7–14 days, depending on your country.</p>
+      <button onclick="togglePolicy('shipping')" class="w-full text-left font-semibold text-2xl flex items-center justify-between">
+        📦 Shipping Policy <span>▼</span>
+      </button>
+      <div id="shipping" class="mt-2 hidden">
+        <p>Shipping costs are calculated separately and will be added at checkout based on your location. Orders are typically processed within 3–5 business days and delivered within 7–14 days, depending on your country.</p>
+      </div>
     </div>
 
     <div>
-      <h3 class="text-2xl font-semibold mb-2">🔄 Refund Policy</h3>
-      <p>We offer a 30-day money-back guarantee from the date of delivery. If you are not satisfied with your Andhe Ki Lathi device, simply return it in its original condition and packaging for a full refund (shipping costs are non-refundable).</p>
+      <button onclick="togglePolicy('refund')" class="w-full text-left font-semibold text-2xl flex items-center justify-between">
+        🔄 Refund Policy <span>▼</span>
+      </button>
+      <div id="refund" class="mt-2 hidden">
+        <p>We offer a 30-day money-back guarantee from the date of delivery. If you are not satisfied with your Andhe Ki Lathi device, simply return it in its original condition and packaging for a full refund (shipping costs are non-refundable).</p>
+      </div>
     </div>
 
     <div>
-      <h3 class="text-2xl font-semibold mb-2">🚚 Delivery Policy</h3>
-      <p>After placing an order, you will receive a confirmation email with your order details. Once your device is shipped, we will share a tracking link. Please allow 3–5 business days for order processing and 7–14 days for delivery. In rare cases, international shipping delays may occur.</p>
+      <button onclick="togglePolicy('delivery')" class="w-full text-left font-semibold text-2xl flex items-center justify-between">
+        🚚 Delivery Policy <span>▼</span>
+      </button>
+      <div id="delivery" class="mt-2 hidden">
+        <p>After placing an order, you will receive a confirmation email with your order details. Once your device is shipped, we will share a tracking link. Please allow 3–5 business days for order processing and 7–14 days for delivery. In rare cases, international shipping delays may occur.</p>
+      </div>
     </div>
 
   </div>
 </section>
 
-
-
+<script>
+  function togglePolicy(id) {
+    const section = document.getElementById(id);
+    section.classList.toggle('hidden');
+  }
+</script>
 
 
 
