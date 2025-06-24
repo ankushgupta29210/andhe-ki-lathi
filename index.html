@@ -135,111 +135,73 @@
   </div>
 </section>
 
+<!-- 💡 Contact + Policies Section (Vertical with Image) -->
+<div style="display: flex; flex-wrap: wrap; align-items: flex-start; justify-content: center; padding: 40px 20px; gap: 40px;">
+
+ <!-- 🌄 Left Image -->
+<div style="flex: 1 1 300px; max-width: 360px;">
+  <img 
+    src="artificialint.png" 
+    alt="Supportive Illustration" 
+    style="width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);" 
+  />
+</div>
 
 
+  <!-- 📦 Right Column: Contact and Policies -->
+  <div style="flex: 1 1 400px; max-width: 500px; display: flex; flex-direction: column; gap: 20px;">
 
+    <!-- 📞 Contact Info -->
+    <div class="contact-card" style="border: 1px solid #ddd; border-radius: 8px; background-color: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+      <button class="contact-toggle" style="width: 100%; background: #f5f5f5; border: none; font-size: 1.1rem; font-weight: bold; padding: 15px; text-align: left; cursor: pointer;">
+        📞 Contact Info
+      </button>
+      <div class="contact-content" style="display: none; padding: 15px;">
+        <p>Email: <a href="mailto:gankush764@gmail.com" class="text-blue-600 underline">gankush764@gmail.com</a></p>
+        <p style="margin-top: 10px;">Instagram:
+          <a href="https://instagram.com/the_ankush_gupta" target="_blank">
+            <img src="Instagram.png" alt="Instagram" style="width: 24px; height: 24px; vertical-align: middle; margin-left: 5px;" />
+          </a>
+        </p>
+      </div>
+    </div>
 
-  <!-- Contact -->
-<section class="py-20 px-6 bg-gray-100">
-  <h2 class="text-4xl font-bold text-center mb-8">Contact</h2>
-  <p class="text-center text-lg mb-4">
-    Email: <a href="mailto:gankush764@gmail.com" class="text-blue-600 underline">gankush764@gmail.com</a>
-  </p>
-  <div class="flex justify-center mt-4">
-    <a href="https://www.instagram.com/the_ankush_gupta" target="_blank" rel="noopener noreferrer">
-      <img src="instagram.png" alt="Instagram" class="w-8 h-8">
-    </a>
-  </div>
-</section>
+    <!-- 📋 Policies -->
+    <div class="policy-card" style="border: 1px solid #ddd; border-radius: 8px; background-color: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+      <button class="policy-toggle" style="width: 100%; background: #f5f5f5; border: none; font-size: 1.1rem; font-weight: bold; padding: 15px; text-align: left; cursor: pointer;">
+        📋 Policies
+      </button>
+      <div class="policy-content" style="display: none; padding: 15px;">
+        <h4>📦 Shipping Policy</h4>
+        <p>Shipping costs are calculated separately and will be added at checkout based on your location. Orders are typically processed within 3–5 business days and delivered within 7–14 days.</p>
 
+        <h4 style="margin-top: 15px;">🔄 Refund Policy</h4>
+        <p>We offer a 30-day money-back guarantee from the date of delivery. If you’re not satisfied, return the device in original condition for a full refund (excluding shipping).</p>
 
-<!-- 🧾 Collapsible Policies Section -->
-<section class="policy-section">
-  <h2 style="text-align: center; font-size: 1.8rem; margin-bottom: 1rem;">📋 Policies</h2>
-
-  <div class="policy-card">
-    <button class="policy-toggle">📦 Shipping Policy</button>
-    <div class="policy-content">
-      <p>Shipping costs are calculated separately and will be added at checkout based on your location. Orders are typically processed within 3–5 business days and delivered within 7–14 days, depending on your country.</p>
+        <h4 style="margin-top: 15px;">🚚 Delivery Policy</h4>
+        <p>Once your device is shipped, a tracking link will be shared. Please allow 3–5 business days for order processing and 7–14 days for delivery.</p>
+      </div>
     </div>
   </div>
+</div>
 
-  <div class="policy-card">
-    <button class="policy-toggle">🔄 Refund Policy</button>
-    <div class="policy-content">
-      <p>We offer a 30-day money-back guarantee from the date of delivery. If you are not satisfied with your Andhe Ki Lathi device, simply return it in its original condition and packaging for a full refund (shipping costs are non-refundable).</p>
-    </div>
-  </div>
-
-  <div class="policy-card">
-    <button class="policy-toggle">🚚 Delivery Policy</button>
-    <div class="policy-content">
-      <p>After placing an order, you will receive a confirmation email with your order details. Once your device is shipped, we will share a tracking link. Please allow 3–5 business days for order processing and 7–14 days for delivery. In rare cases, international shipping delays may occur.</p>
-    </div>
-  </div>
-</section>
-
-<!-- 📦 Style for collapsible policies -->
-<style>
-  .policy-section {
-    max-width: 700px;
-    margin: 40px auto;
-    padding: 0 20px;
-  }
-
-  .policy-card {
-    margin-bottom: 20px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    overflow: hidden;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-  }
-
-  .policy-toggle {
-    width: 100%;
-    background: none;
-    border: none;
-    font-size: 1.1rem;
-    font-weight: bold;
-    padding: 15px;
-    text-align: left;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
-  }
-
-  .policy-toggle:hover {
-    background-color: #f5f5f5;
-  }
-
-  .policy-toggle.open::after {
-    content: " ▲";
-    float: right;
-  }
-
-  .policy-toggle::after {
-    content: " ▼";
-    float: right;
-  }
-
-  .policy-content {
-    display: none;
-    padding: 0 15px 15px;
-    font-size: 0.95rem;
-    color: #333;
-  }
-</style>
-
-<!-- 💡 Toggle logic -->
 <script>
   document.querySelectorAll('.policy-toggle').forEach(button => {
     button.addEventListener('click', () => {
       const content = button.nextElementSibling;
       content.style.display = content.style.display === 'block' ? 'none' : 'block';
-      button.classList.toggle('open');
+    });
+  });
+
+  document.querySelectorAll('.contact-toggle').forEach(button => {
+    button.addEventListener('click', () => {
+      const content = button.nextElementSibling;
+      content.style.display = content.style.display === 'block' ? 'none' : 'block';
     });
   });
 </script>
+
+
 
 
 
