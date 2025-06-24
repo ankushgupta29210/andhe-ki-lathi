@@ -9,16 +9,35 @@
 </head>
 <body class="bg-white text-black font-sans">
 
-  <!-- Hero Section -->
-  <section class="flex flex-col items-center justify-center text-center py-20 px-4 bg-gradient-to-b from-zinc-50 to-white">
-    <h1 class="text-5xl font-bold mb-4">Andhe Ki Lathi</h1>
-    <p class="text-xl mb-6 italic">See Without Sight</p>
-    <img src="eye-of-agamotto.png" alt="Device" class="w-64 h-64 object-contain" />
-    <div class="mt-8 flex gap-4">
-      <button class="text-lg px-6 py-3 bg-black text-white rounded-xl">Buy Now</button>
-      <button class="text-lg px-6 py-3 border rounded-xl">Contact</button>
-    </div>
-  </section>
+<!-- Hero Section -->
+<section class="flex flex-col items-center justify-center text-center py-20 px-4 bg-gradient-to-b from-zinc-50 to-white">
+  <h1 class="text-5xl font-bold mb-4">Andhe Ki Lathi</h1>
+  <p class="text-xl mb-6 italic">See Without Sight</p>
+
+  <!-- Toggleable Device Image -->
+  <div class="relative w-64 h-64">
+    <img id="deviceImage" src="20250624_0232_Steampunk Eye Scanner_simple_compose_01jygmg42jfestwt1cygnb7fxb.gif" 
+         alt="Device Animation" 
+         class="w-full h-full object-contain rounded-xl shadow-lg transition duration-300" />
+    <button onclick="toggleImage()" 
+            class="absolute right-0 top-1/2 -translate-y-1/2 bg-white border rounded-full p-2 shadow hover:bg-gray-100">
+      ➡️
+    </button>
+  </div>
+
+  <!-- Action Buttons -->
+  <div class="mt-8 flex gap-4">
+    <a href="#models" class="text-lg px-6 py-3 bg-black text-white rounded-xl">Buy Now</a>
+    <a href="#contact" class="text-lg px-6 py-3 border rounded-xl">Contact</a>
+  </div>
+</section>
+
+
+
+
+
+
+
 
 <!--video intro-->
 <section class="py-10 bg-white">
@@ -199,6 +218,18 @@
       content.style.display = content.style.display === 'block' ? 'none' : 'block';
     });
   });
+
+
+  // Toggle between GIF and static image
+  let showingGif = true;
+  const gifSrc = "20250624_0232_Steampunk Eye Scanner_simple_compose_01jygmg42jfestwt1cygnb7fxb.gif";
+  const staticSrc = "eye-of-agamotto.png";
+
+  function toggleImage() {
+    const img = document.getElementById("deviceImage");
+    img.src = showingGif ? staticSrc : gifSrc;
+    showingGif = !showingGif;
+    }
 </script>
 
 
