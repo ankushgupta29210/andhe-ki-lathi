@@ -152,50 +152,94 @@
   </div>
 </section>
 
-<!--refund Policies-->
-<section class="py-20 px-6 bg-gray-50">
-  <h2 class="text-4xl font-bold text-center mb-10">📋 Policies</h2>
 
-  <div class="max-w-3xl mx-auto space-y-6 text-lg">
+<!-- 🧾 Collapsible Policies Section -->
+<section class="policy-section">
+  <h2 style="text-align: center; font-size: 1.8rem; margin-bottom: 1rem;">📋 Policies</h2>
 
-    <div>
-      <button onclick="togglePolicy('shipping')" class="w-full text-left font-semibold text-2xl flex items-center justify-between">
-        📦 Shipping Policy <span>▼</span>
-      </button>
-      <div id="shipping" class="mt-2 hidden">
-        <p>Shipping costs are calculated separately and will be added at checkout based on your location. Orders are typically processed within 3–5 business days and delivered within 7–14 days, depending on your country.</p>
-      </div>
+  <div class="policy-card">
+    <button class="policy-toggle">📦 Shipping Policy</button>
+    <div class="policy-content">
+      <p>Shipping costs are calculated separately and will be added at checkout based on your location. Orders are typically processed within 3–5 business days and delivered within 7–14 days, depending on your country.</p>
     </div>
+  </div>
 
-    <div>
-      <button onclick="togglePolicy('refund')" class="w-full text-left font-semibold text-2xl flex items-center justify-between">
-        🔄 Refund Policy <span>▼</span>
-      </button>
-      <div id="refund" class="mt-2 hidden">
-        <p>We offer a 30-day money-back guarantee from the date of delivery. If you are not satisfied with your Andhe Ki Lathi device, simply return it in its original condition and packaging for a full refund (shipping costs are non-refundable).</p>
-      </div>
+  <div class="policy-card">
+    <button class="policy-toggle">🔄 Refund Policy</button>
+    <div class="policy-content">
+      <p>We offer a 30-day money-back guarantee from the date of delivery. If you are not satisfied with your Andhe Ki Lathi device, simply return it in its original condition and packaging for a full refund (shipping costs are non-refundable).</p>
     </div>
+  </div>
 
-    <div>
-      <button onclick="togglePolicy('delivery')" class="w-full text-left font-semibold text-2xl flex items-center justify-between">
-        🚚 Delivery Policy <span>▼</span>
-      </button>
-      <div id="delivery" class="mt-2 hidden">
-        <p>After placing an order, you will receive a confirmation email with your order details. Once your device is shipped, we will share a tracking link. Please allow 3–5 business days for order processing and 7–14 days for delivery. In rare cases, international shipping delays may occur.</p>
-      </div>
+  <div class="policy-card">
+    <button class="policy-toggle">🚚 Delivery Policy</button>
+    <div class="policy-content">
+      <p>After placing an order, you will receive a confirmation email with your order details. Once your device is shipped, we will share a tracking link. Please allow 3–5 business days for order processing and 7–14 days for delivery. In rare cases, international shipping delays may occur.</p>
     </div>
-
   </div>
 </section>
 
-<script>
-  function togglePolicy(id) {
-    const section = document.getElementById(id);
-    section.classList.toggle('hidden');
+<!-- 📦 Style for collapsible policies -->
+<style>
+  .policy-section {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 0 20px;
   }
+
+  .policy-card {
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  }
+
+  .policy-toggle {
+    width: 100%;
+    background: none;
+    border: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 15px;
+    text-align: left;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+
+  .policy-toggle:hover {
+    background-color: #f5f5f5;
+  }
+
+  .policy-toggle.open::after {
+    content: " ▲";
+    float: right;
+  }
+
+  .policy-toggle::after {
+    content: " ▼";
+    float: right;
+  }
+
+  .policy-content {
+    display: none;
+    padding: 0 15px 15px;
+    font-size: 0.95rem;
+    color: #333;
+  }
+</style>
+
+<!-- 💡 Toggle logic -->
+<script>
+  document.querySelectorAll('.policy-toggle').forEach(button => {
+    button.addEventListener('click', () => {
+      const content = button.nextElementSibling;
+      content.style.display = content.style.display === 'block' ? 'none' : 'block';
+      button.classList.toggle('open');
+    });
+  });
 </script>
-
-
 
 
 
